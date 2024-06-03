@@ -1,0 +1,167 @@
+body {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  flex-direction: column;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: 0.4s ease-in-out;
+  max-width: 200px;
+  margin: auto;
+}
+
+.form:hover {
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+#heading {
+  text-align: center;
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+.form.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button1, .button2 {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button1:hover, .button2:hover {
+  background-color: black;
+  color: white;
+}
+
+.chess-piece {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0;
+  width: 40vw;
+  height: 70vh;
+  max-width: 40vw;
+  max-height: 70vh;
+  margin: auto;
+}
+
+.selected {
+  outline: 5px solid #d66565;
+}
+
+.board-row {
+  display: contents;
+}
+
+.board-cell {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light-cell {
+  background-color: #f0d9b5;
+}
+
+.dark-cell {
+  background-color: #b58863;
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .field svg {
+    height: 1em;
+    width: 1em;
+  }
+
+  .input-field {
+    font-size: 14px;
+  }
+
+  .chessboard {
+    width: 95vw;
+    height: 95vh;
+  }
+
+  .button1, .button2 {
+    padding: 0.3em;
+    font-size: 12px;
+  }
+}
